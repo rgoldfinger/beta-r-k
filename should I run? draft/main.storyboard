@@ -15,7 +15,7 @@
                         <sections>
                             <tableViewSection id="uZ5-0c-UQA">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="eDY-AJ-yFH" style="IBUITableViewCellStyleDefault" id="cO8-ui-dh7">
+                                    <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" textLabel="eDY-AJ-yFH" style="IBUITableViewCellStyleDefault" id="cO8-ui-dh7">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cO8-ui-dh7" id="YWf-Mr-fnf">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -32,7 +32,7 @@
                                             <segue destination="S8E-lv-ew4" kind="push" id="ZmT-qY-0n4"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="gGV-fv-5Fy" style="IBUITableViewCellStyleDefault" id="GQi-FQ-x4u">
+                                    <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" textLabel="gGV-fv-5Fy" style="IBUITableViewCellStyleDefault" id="GQi-FQ-x4u">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GQi-FQ-x4u" id="JJP-zg-apX">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -80,11 +80,11 @@
             </objects>
             <point key="canvasLocation" x="1234" y="509"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Result Table View Controller-->
         <scene sceneID="gbe-oS-Dgf">
             <objects>
-                <tableViewController id="S8E-lv-ew4" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="OjI-MN-1zw">
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="S8E-lv-ew4" customClass="ResultTableViewController" customModule="should_I_run__draft" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="OjI-MN-1zw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -167,19 +167,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="map" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sV-6K-eQF">
-                                <rect key="frame" x="95" y="192" width="34" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2o-22-bMO">
-                                <rect key="frame" x="83" y="284" width="46" height="30"/>
+                                <rect key="frame" x="143" y="3" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="fN2-mM-vwH" kind="unwind" unwindAction="unwindToList:" id="dhS-V1-XKr"/>
                                 </connections>
                             </button>
+                            <mapView appearanceType="aqua" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dto-jC-c2L">
+                                <rect key="frame" x="20" y="98" width="280" height="450"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -187,7 +184,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fPL-y8-8gV" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="fN2-mM-vwH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1661" y="884"/>
+            <point key="canvasLocation" x="1687" y="852"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="28Y-KD-qFE">
@@ -214,6 +211,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="0qC-VF-Spt"/>
+        <segue reference="ZmT-qY-0n4"/>
     </inferredMetricsTieBreakers>
 </document>

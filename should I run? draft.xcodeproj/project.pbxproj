@@ -12,6 +12,8 @@
 		25CD764919706155004D62E8 /* should_I_run__draftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CD764819706155004D62E8 /* should_I_run__draftTests.swift */; };
 		25CD765319706190004D62E8 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25CD765219706190004D62E8 /* main.storyboard */; };
 		25CD765519706FB7004D62E8 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CD765419706FB7004D62E8 /* MainTableViewController.swift */; };
+		25CD765F1970936D004D62E8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CD765D19708599004D62E8 /* MapKit.framework */; };
+		25CD766119709665004D62E8 /* ResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CD766019709665004D62E8 /* ResultTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,8 @@
 		25CD765219706190004D62E8 /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
 		25CD765419706FB7004D62E8 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		25CD7656197072BD004D62E8 /* MainTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
+		25CD765D19708599004D62E8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		25CD766019709665004D62E8 /* ResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25CD765F1970936D004D62E8 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +63,7 @@
 		25CD762C19706155004D62E8 = {
 			isa = PBXGroup;
 			children = (
+				25CD765D19708599004D62E8 /* MapKit.framework */,
 				25CD763719706155004D62E8 /* should I run? draft */,
 				25CD764519706155004D62E8 /* should I run? draftTests */,
 				25CD763619706155004D62E8 /* Products */,
@@ -80,6 +86,7 @@
 				25CD763C19706155004D62E8 /* Images.xcassets */,
 				25CD763819706155004D62E8 /* Supporting Files */,
 				25CD765219706190004D62E8 /* main.storyboard */,
+				25CD766019709665004D62E8 /* ResultTableViewController.swift */,
 				25CD765419706FB7004D62E8 /* MainTableViewController.swift */,
 				25CD7656197072BD004D62E8 /* MainTableViewController.h */,
 			);
@@ -211,6 +218,7 @@
 			files = (
 				25CD765519706FB7004D62E8 /* MainTableViewController.swift in Sources */,
 				25CD763B19706155004D62E8 /* AppDelegate.swift in Sources */,
+				25CD766119709665004D62E8 /* ResultTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +395,7 @@
 				25CD764E19706155004D62E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		25CD764F19706155004D62E8 /* Build configuration list for PBXNativeTarget "should I run? draftTests" */ = {
 			isa = XCConfigurationList;
@@ -395,6 +404,7 @@
 				25CD765119706155004D62E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
