@@ -10,6 +10,7 @@
 		25CD763B19706155004D62E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CD763A19706155004D62E8 /* AppDelegate.swift */; };
 		25CD763D19706155004D62E8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25CD763C19706155004D62E8 /* Images.xcassets */; };
 		25CD764919706155004D62E8 /* should_I_run__draftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CD764819706155004D62E8 /* should_I_run__draftTests.swift */; };
+		25CD765319706190004D62E8 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25CD765219706190004D62E8 /* main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +31,7 @@
 		25CD764219706155004D62E8 /* should I run? draftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "should I run? draftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25CD764719706155004D62E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25CD764819706155004D62E8 /* should_I_run__draftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = should_I_run__draftTests.swift; sourceTree = "<group>"; };
+		25CD765219706190004D62E8 /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				25CD763A19706155004D62E8 /* AppDelegate.swift */,
 				25CD763C19706155004D62E8 /* Images.xcassets */,
 				25CD763819706155004D62E8 /* Supporting Files */,
+				25CD765219706190004D62E8 /* main.storyboard */,
 			);
 			path = "should I run? draft";
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25CD763D19706155004D62E8 /* Images.xcassets in Resources */,
+				25CD765319706190004D62E8 /* main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
