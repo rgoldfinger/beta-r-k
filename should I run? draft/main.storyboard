@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
     </dependencies>
     <scenes>
-        <!--Main Table View Controller - Hello, world!-->
+        <!--Main Table View Controller - Should I Run?-->
         <scene sceneID="3fy-5f-oTr">
             <objects>
                 <tableViewController id="w1f-Mq-beW" customClass="MainTableViewController" sceneMemberID="viewController">
@@ -63,7 +63,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="bNB-m3-407" kind="modal" id="5cY-F1-4c8"/>
+                                            <segue destination="lWp-As-NnH" kind="modal" id="5cY-F1-4c8"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -74,7 +74,7 @@
                             <outlet property="delegate" destination="w1f-Mq-beW" id="XYW-g9-rmE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Hello, world!" id="H38-Nd-7hy"/>
+                    <navigationItem key="navigationItem" title="Should I Run?" id="H38-Nd-7hy"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LCN-DA-DIy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -150,7 +150,7 @@
             </objects>
             <point key="canvasLocation" x="1823" y="238"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - Add Destination-->
         <scene sceneID="Cna-dX-z1h">
             <objects>
                 <viewController id="bNB-m3-407" sceneMemberID="viewController">
@@ -163,28 +163,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a destination" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BOu-XN-4nQ">
-                                <rect key="frame" x="20" y="41" width="280" height="30"/>
+                                <rect key="frame" x="20" y="95" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2o-22-bMO">
-                                <rect key="frame" x="143" y="3" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="fN2-mM-vwH" kind="unwind" unwindAction="unwindToList:" id="dhS-V1-XKr"/>
-                                </connections>
-                            </button>
                             <mapView appearanceType="aqua" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dto-jC-c2L">
-                                <rect key="frame" x="20" y="98" width="280" height="450"/>
+                                <rect key="frame" x="20" y="133" width="280" height="415"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Add Destination" id="Mr5-RA-NYH">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="G4M-yo-wkO">
+                            <connections>
+                                <segue destination="fN2-mM-vwH" kind="unwind" unwindAction="unwindToList:" id="gAp-Xz-IN4"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" style="plain" id="s3L-rf-hGK">
+                            <connections>
+                                <segue destination="fN2-mM-vwH" kind="unwind" unwindAction="unwindToList:" id="gnu-CR-QGI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fPL-y8-8gV" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="fN2-mM-vwH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1687" y="852"/>
+            <point key="canvasLocation" x="2310" y="887"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="28Y-KD-qFE">
@@ -203,6 +208,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r5P-9A-7hb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="737" y="476"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Csq-mM-Qvl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lWp-As-NnH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Oiw-mB-gTc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bNB-m3-407" kind="relationship" relationship="rootViewController" id="gDc-by-kFp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dvg-zS-xxk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1778" y="887"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
