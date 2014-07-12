@@ -114,8 +114,29 @@ import UIKit
         return true
     }
     */
-
-
+//
+//    - (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    
+//    UITableViewRowAction *moreAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"More" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+//    // show UIActionSheet
+//    }];
+//    moreAction.backgroundColor = [UIColor greenColor];
+//    
+//    UITableViewRowAction *flagAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"Flag" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+//    // flag the row
+//    }];
+//    flagAction.backgroundColor = [UIColor yellowColor];
+//    
+//    return @[moreAction, flagAction];
+//    }
+//    
+//    /*
+//    * EDIT on 06.07.2014 because of some confusion if 'tableView:commitEditingStyle:forRowAtIndexPath:' is needed.
+//    * It IS needed.
+//    */
+//    - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+//    // No statement or algorithm is needed in here. Just the implementation
+//    }
 
     
     @IBAction func unwindToList(segue:UIStoryboardSegue)  {
