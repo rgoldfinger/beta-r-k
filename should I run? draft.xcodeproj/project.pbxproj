@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		256EB8AD1970D9CF00FE40DD /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256EB8AC1970D9CF00FE40DD /* AddViewController.swift */; };
 		25CD763B19706155004D62E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CD763A19706155004D62E8 /* AppDelegate.swift */; };
 		25CD763D19706155004D62E8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25CD763C19706155004D62E8 /* Images.xcassets */; };
 		25CD764919706155004D62E8 /* should_I_run__draftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CD764819706155004D62E8 /* should_I_run__draftTests.swift */; };
@@ -14,6 +15,7 @@
 		25CD765519706FB7004D62E8 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CD765419706FB7004D62E8 /* MainTableViewController.swift */; };
 		25CD765F1970936D004D62E8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CD765D19708599004D62E8 /* MapKit.framework */; };
 		25CD766119709665004D62E8 /* ResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CD766019709665004D62E8 /* ResultTableViewController.swift */; };
+		25CD76631970A162004D62E8 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CD76621970A162004D62E8 /* Place.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		256B90621970CC5400412214 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		256EB8AC1970D9CF00FE40DD /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		25CD763519706155004D62E8 /* should I run? draft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "should I run? draft.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25CD763919706155004D62E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25CD763A19706155004D62E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +43,7 @@
 		25CD7656197072BD004D62E8 /* MainTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
 		25CD765D19708599004D62E8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		25CD766019709665004D62E8 /* ResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTableViewController.swift; sourceTree = "<group>"; };
+		25CD76621970A162004D62E8 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +91,11 @@
 				25CD763C19706155004D62E8 /* Images.xcassets */,
 				25CD763819706155004D62E8 /* Supporting Files */,
 				25CD765219706190004D62E8 /* main.storyboard */,
+				256EB8AC1970D9CF00FE40DD /* AddViewController.swift */,
+				25CD76621970A162004D62E8 /* Place.swift */,
 				25CD766019709665004D62E8 /* ResultTableViewController.swift */,
 				25CD765419706FB7004D62E8 /* MainTableViewController.swift */,
+				256B90621970CC5400412214 /* MyPlayground.playground */,
 				25CD7656197072BD004D62E8 /* MainTableViewController.h */,
 			);
 			path = "should I run? draft";
@@ -216,9 +224,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				256EB8AD1970D9CF00FE40DD /* AddViewController.swift in Sources */,
 				25CD765519706FB7004D62E8 /* MainTableViewController.swift in Sources */,
 				25CD763B19706155004D62E8 /* AppDelegate.swift in Sources */,
 				25CD766119709665004D62E8 /* ResultTableViewController.swift in Sources */,
+				25CD76631970A162004D62E8 /* Place.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

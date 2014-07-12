@@ -8,14 +8,40 @@
 
 import UIKit
 
+
 @objc (MainTableViewController) class MainTableViewController: UITableViewController {
 
+    var places:Array<Place> = []
+    var colors:Array<UIColor> = []
+    
+    
+    
     @IBAction func unwindToList(segue:UIStoryboardSegue)  {
+        var source = segue.sourceViewController as AddViewController
+        
+        if let item = source.place? {
+            self.places.append(item)
+            self.tableView.reloadData()
+        }
+        
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.places.append(Place(name: "Home", latitude: 37.783531, longitude: -122.40911))
+        self.places.append(Place(name: "Work", latitude: 37.783531, longitude: -122.40911))
+        self.places.append(Place(name: "Hack Reactor", latitude: 37.783531, longitude: -122.40911))
+        self.places.append(Place(name: "Berkeley", latitude: 37.856808, longitude: -122.252941))
+        self.places.append(Place(name: "Stanford", latitude: 37.856808, longitude: -122.252941))
+
+        self.colors.append(UIColor(red: CGFloat(223.0/255), green: CGFloat(73.0/255), blue: CGFloat(73.0/255), alpha: CGFloat(1.0)))
+        self.colors.append(UIColor(red: CGFloat(226.0/255), green: CGFloat(122.0/255), blue: CGFloat(63.0/255), alpha: CGFloat(1.0)))
+        self.colors.append(UIColor(red: CGFloat(239.0/255), green: CGFloat(201.0/255), blue: CGFloat(76.0/255), alpha: CGFloat(1.0)))
+        self.colors.append(UIColor(red: CGFloat(69.0/255), green: CGFloat(178.0/255), blue: CGFloat(157.0/255), alpha: CGFloat(1.0)))
+        self.colors.append(UIColor(red: CGFloat(51.0/255), green: CGFloat(77.0/255), blue: CGFloat(92.0/255), alpha: CGFloat(1.0)))
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -31,27 +57,46 @@ import UIKit
 
     // #pragma mark - Table view data source
 
-//    override func numberOfSectionsInTableView(tableView: UITableView?) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
-//        return 0
-//    }
+    override func numberOfSectionsInTableView(tableView: UITableView?) -> Int {
+        return 1
+    }
 
-//    override func tableView(tableView: UITableView?, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
-//        return 0
-//    }
+    override func tableView(tableView: UITableView?, numberOfRowsInSection section: Int) -> Int {
+        return self.places.count
+    }
+    
+//    
+//    override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+//        
+//        let CellIdentifier = "ListPrototypeCell"
+//        
+//        let cell = tableView.dequeueReusableCellWithIdentifier("ListPrototypeCell", forIndexPath: indexPath) as UITableViewCell
+//    
+//    
+    override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+        let CellIdentifier = "PlacePrototypeCell"
+        let cell = tableView.dequeueReusableCellWithIdentifier("PlacePrototypeCell", forIndexPath: indexPath) as UITableViewCell
+        
+        
+        if let row = indexPath?.row {
+            //get the place from storage associated with this cell index
+            var place = self.places[row]
+            
+            //set cell text to place name
+            cell.textLabel.text = place.placeName
+//            println("row: \(row)")
+            println(self.colors[1])
+            println(UIColor.redColor())
+            println(row)
+            var index = row % self.colors.count
 
-    /*
-    override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath?) -> UITableViewCell? {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
+            cell.backgroundColor = self.colors[index]
+            
+        }
 
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.
