@@ -14,18 +14,10 @@ import UIKit
     var places:Array<Place> = []
     var colors:Array<UIColor> = []
     
+ 
     
     
-    @IBAction func unwindToList(segue:UIStoryboardSegue)  {
-        var source = segue.sourceViewController as AddViewController
-        
-        if let item = source.place? {
-            self.places.append(item)
-            self.tableView.reloadData()
-        }
-        
-        
-    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,14 +57,7 @@ import UIKit
         return self.places.count
     }
     
-//    
-//    override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
-//        
-//        let CellIdentifier = "ListPrototypeCell"
-//        
-//        let cell = tableView.dequeueReusableCellWithIdentifier("ListPrototypeCell", forIndexPath: indexPath) as UITableViewCell
-//    
-//    
+
     override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
         let CellIdentifier = "PlacePrototypeCell"
         let cell = tableView.dequeueReusableCellWithIdentifier("PlacePrototypeCell", forIndexPath: indexPath) as UITableViewCell
@@ -84,10 +69,7 @@ import UIKit
             
             //set cell text to place name
             cell.textLabel.text = place.placeName
-//            println("row: \(row)")
-            println(self.colors[1])
-            println(UIColor.redColor())
-            println(row)
+
             var index = row % self.colors.count
 
             cell.backgroundColor = self.colors[index]
@@ -133,14 +115,28 @@ import UIKit
     }
     */
 
-    /*
-    // #pragma mark - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+
+    
+    @IBAction func unwindToList(segue:UIStoryboardSegue)  {
+        var source = segue.sourceViewController as AddViewController
+        
+        if let item = source.place? {
+            self.places.append(item)
+            self.tableView.reloadData()
+        }
+        
     }
-    */
+    
+    @IBAction override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
+        var controller = segue?.destinationViewController as ResultTableViewController
+
+        controller.locationName = sender?.text
+
+    }
+
+    
+
+
 
 }

@@ -9,9 +9,15 @@
 import UIKit
 
 class ResultTableViewController: UITableViewController {
+    
+    var locationName: String?
 
+    @IBOutlet var destinationCell : UITableViewCell
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.destinationCell.textLabel.text = "You're going to be late going to " + self.locationName!
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -88,14 +94,16 @@ class ResultTableViewController: UITableViewController {
     }
     */
 
-    /*
+
     // #pragma mark - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
+//    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject?) {
+//        // Get the new view controller using [segue destinationViewController].
+//        // Pass the selected object to the new view controller.
+//        var controller = segue.destinationViewController as ResultTableViewController
+//        controller.locationName = ""
+//    }
+
 
 }

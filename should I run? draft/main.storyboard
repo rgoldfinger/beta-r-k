@@ -30,7 +30,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <segue destination="S8E-lv-ew4" kind="push" id="ZmT-qY-0n4"/>
+                                    <segue destination="S8E-lv-ew4" kind="push" identifier="ResultsSegue" id="ZmT-qY-0n4"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -43,7 +43,7 @@
                     <navigationItem key="navigationItem" title="Should I Run?" id="H38-Nd-7hy">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ezb-uD-wgI">
                             <connections>
-                                <segue destination="lWp-As-NnH" kind="modal" id="Jys-UY-9Uf"/>
+                                <segue destination="lWp-As-NnH" kind="modal" identifier="AddSegue" id="Jys-UY-9Uf"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -117,6 +117,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="kDg-2E-atx"/>
+                    <connections>
+                        <outlet property="destinationCell" destination="gCQ-t5-7Y3" id="mdl-4B-kU1"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ueO-Yo-mj5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
