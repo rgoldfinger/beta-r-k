@@ -8,7 +8,9 @@
 
 import UIKit
 
-class AddViewController: UIViewController {
+import MapKit
+
+class AddViewController: UIViewController, MKMapViewDelegate {
 
 
     @IBOutlet var textField : UITextField

@@ -149,8 +149,9 @@ import UIKit
         
     }
     
-    @IBAction override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
+    override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
         var controller = segue?.destinationViewController as ResultTableViewController
+
 
         controller.locationName = sender?.text
 
